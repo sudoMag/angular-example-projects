@@ -7,7 +7,7 @@
       <h3 class="coin-name">
         {{ coin.name }} <span>({{ coin.symbol }})</span>
       </h3>
-      <p>{{ coin.current_price }} USD</p>
+      <p>{{ coin.current_price.toLocaleString() }} USD</p>
       <div class="porcentage">
         <div
           [class]="
@@ -19,8 +19,8 @@
         <p
           [style]="
             coin.price_change_percentage_24h >= 0
-              ? 'color: green;'
-              : 'color: red;'
+              ? 'color: green;filter: drop-shadow(0px 0px 5px rgb(0, 214, 0));'
+              : 'color: red;filter: drop-shadow(0px 0px 5px rgb(255, 30, 0));'
           "
         >
           {{ coin.price_change_percentage_24h.toFixed(2) }}% /24hrs
