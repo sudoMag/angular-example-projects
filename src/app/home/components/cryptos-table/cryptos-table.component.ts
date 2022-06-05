@@ -9,6 +9,8 @@ interface Coin {
   symbol: string;
   current_price: number;
   price_change_percentage_24h: number;
+  price_change_percentage_7d_in_currency: number;
+  sparkerline?: string;
 }
 
 @Component({
@@ -19,6 +21,7 @@ interface Coin {
 export class CryptosTableComponent implements OnInit {
   constructor(private cryptoService: CryptoDataService) {}
   coins: Coin[] = [];
+  numberCards = new Array(10);
 
   example = [
     {
@@ -39,12 +42,17 @@ export class CryptosTableComponent implements OnInit {
       current_price: 1809.88,
       price_change_percentage_24h: 1.69872,
     },
-  ]
+  ];
 
   ngOnInit(): void {
     this.cryptoService.getAll().subscribe((res) => {
-      this.coins = res;
-      console.log(res);
+      this.coins = res.map<Coin>((coin): Coin => {
+        return {
+          ...coin,
+          sparkerline: this.cryptoService.getSparkerlineTo(coin),
+        };
+      });
+      console.log(this.coins);
     });
   }
 }

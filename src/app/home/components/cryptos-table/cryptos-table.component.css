@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
 }
 
 .coin-card {
@@ -12,7 +13,13 @@
   margin: 10px;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   transition-duration: 200ms;
+}
+
+.top-container {
+  display: flex;
+  width: 100%;
 }
 
 .coin-card:hover {
@@ -36,6 +43,7 @@
   background-color: rgb(54, 54, 54);
   border-radius: 10px;
   margin: auto;
+  box-shadow: 4px 4px 5px #0e0e0e;
 }
 
 .coin-description {
@@ -43,7 +51,7 @@
   max-width: 120px;
 }
 
-.coin-name span{
+.coin-name span {
   text-transform: uppercase;
 }
 
@@ -71,4 +79,16 @@ div.triangle-icon-red {
   width: 10px;
   filter: drop-shadow(0px 0px 5px rgb(0, 214, 0));
   margin: 0 8px;
+}
+
+.sparkerline {
+  margin: 15px;
+  height: 82px;
+}
+
+.load-box {
+  background-color: rgb(41, 44, 46);
+  border-radius: 10px;
+  height: 1em;
+  width: 120px;
 }

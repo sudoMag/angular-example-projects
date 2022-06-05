@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './home/components/navbar/navbar.component';
-import { NavLinkComponent } from './home/components/nav-link/nav-link.component';
 import { CryptosTableComponent } from './home/components/cryptos-table/cryptos-table.component';
 import { CryptoDataService } from './home/services/crypto-data.service';
 
@@ -15,7 +14,6 @@ import { CryptoDataService } from './home/services/crypto-data.service';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    NavLinkComponent,
     CryptosTableComponent
   ],
   imports: [
