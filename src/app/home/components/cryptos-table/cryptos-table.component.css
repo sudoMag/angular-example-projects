@@ -1,0 +1,74 @@
+.coins-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.coin-card {
+  background-color: rgb(17 20 28);
+  min-width: 250px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  transition-duration: 200ms;
+}
+
+.coin-card:hover {
+  filter: drop-shadow(0px 0px 10px rgb(255, 255, 43));
+}
+
+.coin-image {
+  width: 50px;
+  margin: auto;
+  transition-duration: 200ms;
+}
+
+.coin-image:hover {
+  filter: drop-shadow(0px 0px 10px rgb(255, 255, 43));
+}
+
+.image-container {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(54, 54, 54);
+  border-radius: 10px;
+  margin: auto;
+}
+
+.coin-description {
+  margin: auto;
+  max-width: 120px;
+}
+
+.coin-name span{
+  text-transform: uppercase;
+}
+
+.porcentage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.triangle-icon-red:before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"  height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="red" d="M10.285 3.858c.777-1.294 2.653-1.294 3.43 0l8.468 14.113c.8 1.333-.16 3.029-1.715 3.029H3.532c-1.554 0-2.514-1.696-1.715-3.029l8.468-14.113Z"/></svg>');
+  width: 10px;
+  fill: red;
+  filter: drop-shadow(0px 0px 5px rgb(255, 30, 0));
+  transform: rotate(180deg);
+  margin: auto;
+}
+
+div.triangle-icon-red {
+  transform: rotate(180deg);
+}
+
+.triangle-icon-green:before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"  height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="green" d="M10.285 3.858c.777-1.294 2.653-1.294 3.43 0l8.468 14.113c.8 1.333-.16 3.029-1.715 3.029H3.532c-1.554 0-2.514-1.696-1.715-3.029l8.468-14.113Z"/></svg>');
+  width: 10px;
+  filter: drop-shadow(0px 0px 5px rgb(0, 214, 0));
+  margin: 0 8px;
+}

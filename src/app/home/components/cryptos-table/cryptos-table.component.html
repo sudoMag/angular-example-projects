@@ -1,0 +1,34 @@
+<ul class="coins-container">
+  <li class="coin-card" *ngFor="let coin of coins">
+    <div class="image-container">
+      <img class="coin-image" [src]="coin.image" />
+    </div>
+    <div class="coin-description">
+      <h3 class="coin-name">
+        {{ coin.name }} <span>({{ coin.symbol }})</span>
+      </h3>
+      <p>{{ coin.current_price }} USD</p>
+      <div class="porcentage">
+        <div
+          [class]="
+            coin.price_change_percentage_24h >= 0
+              ? 'triangle-icon-green'
+              : 'triangle-icon-red'
+          "
+        ></div>
+        <p
+          [style]="
+            coin.price_change_percentage_24h >= 0
+              ? 'color: green;'
+              : 'color: red;'
+          "
+        >
+          {{ coin.price_change_percentage_24h.toFixed(2) }}% /24hrs
+        </p>
+      </div>
+    </div>
+  </li>
+  <div *ngIf="coins.length === 0">
+    <li class="coin-card" *ngFor="let i; in: 10"></li>
+  </div>
+</ul>

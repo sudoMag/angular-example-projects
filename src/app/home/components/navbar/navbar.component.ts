@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NavLinkComponent } from '../nav-link/nav-link.component';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  @ViewChild(NavbarComponent)
+  child!: NavLinkComponent;
 
   constructor() { }
 
