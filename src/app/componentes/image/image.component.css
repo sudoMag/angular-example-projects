@@ -11,6 +11,9 @@
 }
 
 .sparkerline {
-  margin: 15px;
   height: 82px;
+}
+
+app-image.sparkerline {
+  margin: 15px;
 }
