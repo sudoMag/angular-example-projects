@@ -2,7 +2,7 @@
   <li class="coin-card" *ngFor="let coin of coins">
     <div class="top-container">
       <div class="image-container">
-        <img class="coin-image" [src]="coin.image" />
+        <app-image class="coin-image" [src]="coin.image" ></app-image>
       </div>
       <div class="coin-description">
         <h3 class="coin-name">
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <img
+    <app-image
       class="sparkerline"
       [src]="coin.sparkerline"
       [style]="
@@ -37,7 +37,7 @@
           ? 'filter: drop-shadow(0px 10px 6px rgb(0, 214, 0));'
           : 'filter: drop-shadow(0px 10px 6px rgb(255, 30, 0));'
       "
-    />
+    ></app-image>
   </li>
 </ul>
 <ul class="coins-container" *ngIf="coins.length === 0">

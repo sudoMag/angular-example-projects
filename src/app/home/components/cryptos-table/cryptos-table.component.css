@@ -15,25 +15,17 @@
   display: flex;
   flex-direction: column;
   transition-duration: 200ms;
-}
-
-.top-container {
-  display: flex;
-  width: 100%;
+  opacity: 0;
+  animation: opacityFade 200ms 0ms linear forwards;
 }
 
 .coin-card:hover {
   filter: drop-shadow(0px 0px 10px rgb(255, 255, 43));
 }
 
-.coin-image {
-  width: 50px;
-  margin: auto;
-  transition-duration: 200ms;
-}
-
-.coin-image:hover {
-  filter: drop-shadow(0px 0px 10px rgb(255, 255, 43));
+.top-container {
+  display: flex;
+  width: 100%;
 }
 
 .image-container {
@@ -43,6 +35,8 @@
   background-color: rgb(54, 54, 54);
   border-radius: 10px;
   margin: auto;
+  justify-content: center;
+  align-items: center;
   box-shadow: 4px 4px 5px #0e0e0e;
 }
 
@@ -91,4 +85,5 @@ div.triangle-icon-red {
   border-radius: 10px;
   height: 1em;
   width: 120px;
+  animation: loadingFade 2s 0ms alternate infinite ease-in-out;
 }
