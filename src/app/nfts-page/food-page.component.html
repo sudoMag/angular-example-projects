@@ -1,0 +1,25 @@
+<h1 id="tittle">Crypto News 📰</h1>
+<ul class="news-container">
+  <li *ngFor="let new of news" class="new-card">
+    <a [href]="new.link" target="_blank">
+      <h1 class="new-title">{{ new.title }}</h1>
+      <div class="new-info">
+        <h2 class="new-source">{{ new.source_id }}</h2>
+        <h4 *ngFor="let country of new.country" class="new-country">
+          {{ country }}
+        </h4>
+      </div>
+    </a>
+  </li>
+</ul>
+<div *ngIf="news.length === 0" id="loading-container">
+  <ul class="news-container">
+    <li *ngFor="let card of cardsNumber" class="new-card">
+      <h1 class="new-title load-box full-width"></h1>
+      <div class="new-info">
+        <h2 class="new-source load-box"></h2>
+        <h4 class="new-country"></h4>
+      </div>
+    </li>
+  </ul>
+</div>

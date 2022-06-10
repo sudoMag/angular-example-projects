@@ -10,6 +10,7 @@ import { NavbarComponent } from './home/components/navbar/navbar.component';
 import { CryptosTableComponent } from './home/components/cryptos-table/cryptos-table.component';
 import { CryptoDataService } from './home/services/crypto-data.service';
 import { ImageComponent } from './componentes/image/image.component';
+import { FoodPageComponent } from './nfts-page/food-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ImageComponent } from './componentes/image/image.component';
     HomeComponent,
     NavbarComponent,
     CryptosTableComponent,
-    ImageComponent
+    ImageComponent,
+    FoodPageComponent
   ],
   imports: [
     BrowserModule,

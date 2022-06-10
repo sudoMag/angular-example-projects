@@ -9,6 +9,14 @@
   display: flex;
 }
 
+.nav-title {
+  align-self: center;
+}
+
+.nav-title span {
+  color: rgb(123, 22, 255);
+}
+
 .navbar-content {
   display: flex;
   justify-content: space-between;
@@ -16,12 +24,29 @@
   max-width: 1200px;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: white;
+  line-height: 1;
+  align-items: center;
+  font-size: 1.1em;
+  transition-duration: 200ms;
+}
+
+.nav-link:hover {
+  padding: 10px 15px;
+  background-color: rgb(123, 22, 255);
+  filter: drop-shadow(0px 0px 10px rgb(255, 255, 43));
+  border-radius: 50px;
+}
+
 .links-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .links-container li {
-  display: block;
-  margin: 5px;
+  display: flex;
+  margin: 15px;
 }

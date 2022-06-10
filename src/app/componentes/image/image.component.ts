@@ -19,6 +19,9 @@ import {
       state('loaded', style({
         opacity: 1,
       })),
+      transition('loading => loaded', [
+        animate('300ms')
+      ]),
     ])
   ]
 })
