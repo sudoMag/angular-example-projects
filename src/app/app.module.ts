@@ -16,6 +16,7 @@ import { CoinComponent } from './componentes/cryptos-table/coin/coin.component';
 import { ErrorCardComponent } from './componentes/error-card/error-card.component';
 import { ErrorCardService } from './componentes/error-card/error-card.service';
 import { NewsDataService } from './news-page/services/news-data.service';
+import { LikeButtonComponent } from './componentes/cryptos-table/coin/like-button/like-button.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NewsDataService } from './news-page/services/news-data.service';
     NewsPageComponent,
     FavoritesComponent,
     CoinComponent,
-    ErrorCardComponent
+    ErrorCardComponent,
+    LikeButtonComponent
   ],
   imports: [
     BrowserModule,

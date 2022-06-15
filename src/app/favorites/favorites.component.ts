@@ -2,10 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CryptoDataService } from '../componentes/cryptos-table/services/crypto-data.service';
 import Coin from '../componentes/icoin';
 
-interface Following {
-  coins: string[];
-}
-
 @Component({
   selector: 'app-favorites',
   templateUrl: './favorites.component.html',
@@ -26,18 +22,15 @@ export class FavoritesComponent implements OnInit {
 
   setCoins() {
     let items =
-      window.localStorage.getItem('follow') ||
-      `{"coins": [
-        "bitcoin"
-      ]}`;
+      window.localStorage.getItem('follow');
     if (items) {
-      const following: Following = JSON.parse(items);
-      if (following.coins.length !== 0) {
+      const following: string[] = JSON.parse(items);
+      if (following.length !== 0) {
         console.log(following);
         this.cryptoService.getAll().then((res) => {
           if (res) {
             this.coins = res.filter((coin) =>
-              following.coins.includes(coin.id)
+              following.includes(coin.id)
             );
           } else {
             this.showErrorMesssage();

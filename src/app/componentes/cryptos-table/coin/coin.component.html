@@ -38,17 +38,29 @@
         : 'filter: drop-shadow(0px 10px 6px rgb(255, 30, 0));'
     "
   ></app-image>
-  <p class="week-resume" *ngIf="coin.price_change_percentage_7d_in_currency < 0">
-    Bajó un
-    <span>{{
-      (coin.price_change_percentage_7d_in_currency * -1).toFixed(2)
-    }}%</span
-    > en los ultimos 7 días
-  </p>
-  <p class="week-resume" *ngIf="coin.price_change_percentage_7d_in_currency > 0">
-    Subió un <span>{{ coin.price_change_percentage_7d_in_currency.toFixed(2) }}%</span> en
-    los ultimos 7 días
-  </p>
+  <div class="resume-container">
+    <p
+      class="week-resume"
+      *ngIf="coin.price_change_percentage_7d_in_currency < 0"
+    >
+      Bajó un
+      <span
+        >{{
+          (coin.price_change_percentage_7d_in_currency * -1).toFixed(2)
+        }}%</span
+      >
+      en los ultimos 7 días
+    </p>
+    <p
+      class="week-resume"
+      *ngIf="coin.price_change_percentage_7d_in_currency > 0"
+    >
+      Subió un
+      <span>{{ coin.price_change_percentage_7d_in_currency.toFixed(2) }}%</span>
+      en los ultimos 7 días
+    </p>
+    <app-like-button [coinId]="coin.id"></app-like-button>
+  </div>
 </li>
 
 <li *ngIf="loading" class="coin-card">
@@ -63,5 +75,8 @@
     </div>
   </div>
   <div class="sparkerline"></div>
-  <p class="load-box"></p>
+  <div class="resume-container">
+    <p class="load-box"></p>
+    <div class="box"></div>
+  </div>
 </li>
