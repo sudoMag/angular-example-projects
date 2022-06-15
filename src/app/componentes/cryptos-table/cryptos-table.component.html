@@ -1,0 +1,6 @@
+<ul class="coins-container">
+  <app-coin *ngFor="let coin of coins" [coin]="coin"></app-coin>
+</ul>
+<ul class="coins-container" *ngIf="coins.length === 0">
+  <app-coin *ngFor="let i of numberCards" [loading]="true"></app-coin>
+</ul>

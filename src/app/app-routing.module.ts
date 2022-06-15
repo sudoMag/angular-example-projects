@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 import { HomeComponent } from './home/home.component';
-import { FoodPageComponent } from './nfts-page/food-page.component';
+import { NewsPageComponent } from './news-page/news-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'news', component: FoodPageComponent },
+  { path: 'news', component: NewsPageComponent },
+  { path: 'following', component: FavoritesComponent },
 ];
 
 @NgModule({
