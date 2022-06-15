@@ -1,0 +1,67 @@
+<li *ngIf="!loading" class="coin-card">
+  <div class="top-container">
+    <div class="image-container">
+      <app-image class="coin-image" [src]="coin.image"></app-image>
+    </div>
+    <div class="coin-description">
+      <h3 class="coin-name">
+        {{ coin.name }} <span>({{ coin.symbol }})</span>
+      </h3>
+      <p>{{ coin.current_price.toLocaleString() }} USD</p>
+      <div class="porcentage">
+        <div
+          [class]="
+            coin.price_change_percentage_24h >= 0
+              ? 'triangle-icon-green'
+              : 'triangle-icon-red'
+          "
+        ></div>
+        <p
+          class="percentage"
+          [style]="
+            coin.price_change_percentage_24h >= 0
+              ? 'color: green;filter: drop-shadow(0px 0px 5px rgb(0, 214, 0));'
+              : 'color: red;filter: drop-shadow(0px 0px 5px rgb(255, 30, 0));'
+          "
+        >
+          {{ coin.price_change_percentage_24h.toFixed(2) }}% /24hrs
+        </p>
+      </div>
+    </div>
+  </div>
+  <app-image
+    class="sparkerline"
+    [src]="coin.sparkerline"
+    [style]="
+      coin.price_change_percentage_7d_in_currency >= 0
+        ? 'filter: drop-shadow(0px 10px 6px rgb(0, 214, 0));'
+        : 'filter: drop-shadow(0px 10px 6px rgb(255, 30, 0));'
+    "
+  ></app-image>
+  <p class="week-resume" *ngIf="coin.price_change_percentage_7d_in_currency < 0">
+    Bajó un
+    <span>{{
+      (coin.price_change_percentage_7d_in_currency * -1).toFixed(2)
+    }}%</span
+    > en los ultimos 7 días
+  </p>
+  <p class="week-resume" *ngIf="coin.price_change_percentage_7d_in_currency > 0">
+    Subió un <span>{{ coin.price_change_percentage_7d_in_currency.toFixed(2) }}%</span> en
+    los ultimos 7 días
+  </p>
+</li>
+
+<li *ngIf="loading" class="coin-card">
+  <div class="top-container">
+    <div class="image-container"></div>
+    <div class="coin-description">
+      <h3 class="coin-name load-box"></h3>
+      <p class="load-box"></p>
+      <div class="porcentage">
+        <p class="load-box"></p>
+      </div>
+    </div>
+  </div>
+  <div class="sparkerline"></div>
+  <p class="load-box"></p>
+</li>

@@ -7,10 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './home/components/navbar/navbar.component';
-import { CryptosTableComponent } from './home/components/cryptos-table/cryptos-table.component';
-import { CryptoDataService } from './home/services/crypto-data.service';
+import { CryptosTableComponent } from './componentes/cryptos-table/cryptos-table.component';
+import { CryptoDataService } from './componentes/cryptos-table/services/crypto-data.service';
 import { ImageComponent } from './componentes/image/image.component';
-import { FoodPageComponent } from './nfts-page/food-page.component';
+import { NewsPageComponent } from './news-page/news-page.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { CoinComponent } from './componentes/cryptos-table/coin/coin.component';
+import { ErrorCardComponent } from './componentes/error-card/error-card.component';
+import { ErrorCardService } from './componentes/error-card/error-card.service';
+import { NewsDataService } from './news-page/services/news-data.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,10 @@ import { FoodPageComponent } from './nfts-page/food-page.component';
     NavbarComponent,
     CryptosTableComponent,
     ImageComponent,
-    FoodPageComponent
+    NewsPageComponent,
+    FavoritesComponent,
+    CoinComponent,
+    ErrorCardComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,7 @@ import { FoodPageComponent } from './nfts-page/food-page.component';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [CryptoDataService],
+  providers: [CryptoDataService, ErrorCardService, NewsDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

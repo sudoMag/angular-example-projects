@@ -1,0 +1,15 @@
+.coins-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.load-box {
+  background-color: rgb(41, 44, 46);
+  border-radius: 10px;
+  height: 1em;
+  width: 120px;
+  animation: loadingFade 2s 0ms alternate infinite ease-in-out;
+}

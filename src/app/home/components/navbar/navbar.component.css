@@ -30,6 +30,7 @@
   line-height: 1;
   align-items: center;
   font-size: 1.1em;
+  font-weight: bold;
   transition-duration: 200ms;
 }
 

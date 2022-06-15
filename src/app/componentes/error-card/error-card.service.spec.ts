@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FoodDataService } from './food-data.service';
+import { ErrorCardService } from './error-card.service';
 
-describe('NftsDataService', () => {
-  let service: FoodDataService;
+describe('ErrorCardService', () => {
+  let service: ErrorCardService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FoodDataService);
+    service = TestBed.inject(ErrorCardService);
   });
 
   it('should be created', () => {
