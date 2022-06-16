@@ -37,7 +37,7 @@
 .nav-link:hover {
   padding: 10px 15px;
   background-color: rgb(123, 22, 255);
-  filter: drop-shadow(0px 0px 10px rgb(255, 255, 43));
+  filter: drop-shadow(0px 0px 10px rgb(235, 37, 235));
   border-radius: 50px;
 }
 
@@ -50,4 +50,58 @@
 .links-container li {
   display: flex;
   margin: 15px;
+}
+
+#menu-icon {
+  display: none;
+  background-color: blueviolet;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-icon path {
+  fill: white;
+}
+
+#menu-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
+  #menu-icon {
+    display: flex;
+    margin: auto;
+  }
+
+  .links-container {
+    display: none;
+    transition-duration: 300ms;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    top: 85px;
+    right: 0;
+    height: calc(100% - 100px);
+    backdrop-filter: blur(10px);
+  }
+
+  .links-container li {
+    margin: 30px;
+  }
+
+  .links-container.show {
+    display: flex;
+  }
+
+  .navbar-content {
+    margin: auto;
+    width: auto;
+    max-width: none;
+  }
 }

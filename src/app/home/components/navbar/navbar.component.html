@@ -1,7 +1,11 @@
 <nav id="navbar">
   <div class="navbar-content">
     <h1 class="nav-title">Moni<span>Moni</span>$</h1>
-    <ul class="links-container">
+    <ul
+      class="links-container"
+      [@visibility]="showMenu ? 'show' : 'hide'"
+      [ngClass]="showMenu ? 'show' : 'hide'"
+    >
       <li>
         <a class="nav-link" routerLink="/">Home</a>
       </li>
@@ -12,5 +16,25 @@
         <a class="nav-link" routerLink="/following">Follow</a>
       </li>
     </ul>
+  </div>
+  <div id="menu-icon" (click)="toggleMenu()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+      width="1em"
+      height="1em"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+      />
+    </svg>
   </div>
 </nav>
