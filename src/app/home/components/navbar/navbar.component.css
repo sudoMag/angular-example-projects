@@ -78,7 +78,6 @@
   }
 
   .links-container {
-    display: none;
     transition-duration: 300ms;
     position: fixed;
     flex-direction: column;
@@ -97,6 +96,10 @@
 
   .links-container.show {
     display: flex;
+  }
+
+  .links-container.hide {
+    display: none;
   }
 
   .navbar-content {
