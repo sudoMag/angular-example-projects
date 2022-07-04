@@ -10,9 +10,10 @@ import Coin from '../icoin';
 export class CryptosTableComponent implements OnInit {
   @Input()
   coins!: Coin[];
-
   @Input()
   loadError: boolean = false;
+  @Input()
+  noFavorites?: boolean = false;
   constructor() {}
   numberCards = new Array(10);
 

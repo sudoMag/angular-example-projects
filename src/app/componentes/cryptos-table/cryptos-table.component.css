@@ -13,3 +13,26 @@
   width: 120px;
   animation: loadingFade 2s 0ms alternate infinite ease-in-out;
 }
+
+#text-container {
+  justify-content: center;
+  display: flex;
+  width: 100vw;
+}
+
+#text-container h1 {
+  color: rgb(134, 41, 255);
+  opacity: 0;
+  animation: opacityFade 200ms 0ms linear forwards;
+  border: 2px solid;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 10px hsl(345, 100%, 53%));
+}
+
+@media screen and (max-width: 800px) {
+  .coins-container {
+    width: 100vw;
+  }
+}
